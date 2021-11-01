@@ -64,7 +64,6 @@ export default function Counter() {
     return setCount
   };
 
-  const even = 2
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
