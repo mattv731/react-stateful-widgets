@@ -37,14 +37,14 @@ const sadMood = 'Rather sad';
 export default function Moods() {
   const [mood, setMood] = useState(initialMood);
 
-  const makeHappy = (mood) => {
-    return happyMood
+  const makeHappy = () => {
+    setMood(happyMood)
   };
-  const makeSad = (mood) => {
-    return sadMood
+  const makeSad = () => {
+    setMood(sadMood)
   };
-  const reset = (mood) => {
-    return initialMood
+  const reset = () => {
+    setMood(initialMood)
   };
 
   const style = {
@@ -58,9 +58,9 @@ export default function Moods() {
       <h2>Moods</h2>
       <div id='mood' style={style}>{mood}</div> {/* STEP 3 */}
       <div>
-        <button id='makeHappy' onClick={makeHappy}>Make Happy</button>
-        <button id='makeSad' onClick={makeSad}>Make Sad</button>
-        <button id='resetMood' onClick={reset}>Reset</button>
+        <button id='makeHappy' onClick={() => makeHappy(happyMood)}>Make Happy</button>
+        <button id='makeSad' onClick={() => makeSad(sadMood)}>Make Sad</button>
+        <button id='resetMood' onClick={() => reset(initialMood)}>Reset</button>
       </div>
     </div>
   );

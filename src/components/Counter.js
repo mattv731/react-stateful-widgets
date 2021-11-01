@@ -51,19 +51,6 @@ import React, { useState } from 'react'; /* STEP 0 */
 export default function Counter() {
   const [count, setCount] = useState(0);
 
-  const increment = (count) => {
-    const setCount = count + 1
-    return setCount
-  };
-  const decrement = (count) => {
-    const setCount = count - 1
-    return setCount
-  };
-  const reset = () => {
-    setCount = 0
-    return setCount
-  };
-
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
