@@ -37,14 +37,14 @@ const sadMood = 'Rather sad';
 export default function Moods() {
   const [mood, setMood] = useState(initialMood);
 
-  const makeHappy = () => {
-    /* STEP 4 */
+  const makeHappy = (mood) => {
+    return happyMood
   };
-  const makeSad = () => {
-    /* STEP 5 */
+  const makeSad = (mood) => {
+    return sadMood
   };
-  const reset = () => {
-    /* STEP 6 */
+  const reset = (mood) => {
+    return initialMood
   };
 
   const style = {
